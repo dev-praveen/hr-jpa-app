@@ -1,1 +1,21 @@
+server:
+  port: 8091
+  servlet:
+    context-path: /hr-jpa-app
 
+spring:
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: ${DB_USER_NAME}
+    password: ${DB_PASSWORD}
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
